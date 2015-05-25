@@ -77,4 +77,14 @@ public class Tablica {
         }
         writer.println();      
     }
+    
+    public String modyfikujSlowo(String slowo)
+    {
+        Random generator = new Random();
+        int pozycjaZmiany = generator.nextInt(slowo.length());
+        int kodLitery = generator.nextInt(26);
+        char litera = (char) (kodLitery + 'a');
+        String noweSlowo = slowo.substring(0,pozycjaZmiany)+litera+slowo.substring(pozycjaZmiany+1);
+        return noweSlowo;
+    }
 }
