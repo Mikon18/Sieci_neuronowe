@@ -1,4 +1,3 @@
-
 package Glowny;
 
 import java.io.BufferedReader;
@@ -11,7 +10,7 @@ import java.util.Random;
 
 public class Tablica {
     
-    final private int LICZBA_SLOW = 100;
+    final private int LICZBA_SLOW = 500;
     
     public void generujSlowa() throws FileNotFoundException, IOException
     {
@@ -31,10 +30,7 @@ public class Tablica {
             for (int i = 0; i < n; i++) {
                 c = literki[random.nextInt(literki.length)];
                 sb.append(c);
-            }
-  //          output = br.readLine();
-  //          kodujSlowo(output, writer);
-            
+            }            
             writer3.println(sb.toString());
             kodujSlowo(sb.toString(), writer);
             generujIndeks(sb.toString(), writer2, writer4);
