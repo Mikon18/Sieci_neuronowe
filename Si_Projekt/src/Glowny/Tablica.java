@@ -11,6 +11,8 @@ import java.util.Random;
 
 public class Tablica {
     
+    final private int LICZBA_SLOW = 100;
+    
     public void generujSlowa() throws FileNotFoundException, IOException
     {
         char c;
@@ -23,7 +25,7 @@ public class Tablica {
         PrintWriter writer2 = new PrintWriter("indeksy.txt");
         PrintWriter writer3 = new PrintWriter("slowa_do_modyfikacji.txt");
         PrintWriter writer4 = new PrintWriter("indeksy_bin.txt");
-        for(int j = 0; j< 100; j++)
+        for(int j = 0; j < LICZBA_SLOW; j++)
         {
             n = random.nextInt(6) + 3;
             for (int i = 0; i < n; i++) {
@@ -91,7 +93,7 @@ public class Tablica {
         int pozycjaZmiany;
         int kodLitery;
         char litera;
-        for(int i = 0; i < 100; i++)
+        for(int i = 0; i < LICZBA_SLOW; i++)
         {
             slowo = br.readLine();
             pozycjaZmiany = generator.nextInt(slowo.length());
